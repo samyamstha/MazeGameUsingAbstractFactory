@@ -1,11 +1,11 @@
 package maze;
 
-
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RedMazeFactory extends MazeFactory {
+public class BasicMazeFactory extends MazeFactory{
+
 
 
     @Override
@@ -20,16 +20,16 @@ public class RedMazeFactory extends MazeFactory {
 
     @Override
     public Wall makeWall() {
-        return new RedWall();
+        return super.makeWall();
     }
 
     @Override
     public Door makeDoor(Room room1, Room room2) {
-        return new Door(room1, room2);
+        return super.makeDoor(room1, room2);
     }
 
     @Override
     public Room makeRoom(int number) {
-        return new RedRoom(number);
+        return super.makeRoom(number);
     }
 }
